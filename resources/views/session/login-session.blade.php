@@ -15,7 +15,7 @@
       
                 </div>
                 <div class="card card-body" style="margin: 0rem;" class="col-md-4">
-                <h1 align="center" class="font-poppins">Login</h1>
+                <h1 align="center" >Login</h1>
                   <form role="form" method="POST" action="/session">
                     @csrf
                     <label class="fs-6">Email</label>
