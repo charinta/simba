@@ -5,8 +5,8 @@
         SIMBA
       </a>
       <div class="d-flex">
-        <a class="btn btn-outline-primary text-primary me-3" href="{{ url('login') }}">Login</a>
-        <a class="btn btn-primary" href="{{ url('register') }}">Register</a>
+        <a class="btn btn-outline-primary text-primary me-3" href="{{ url('static-sign-in') }}">Login</a>
+        <a class="btn btn-primary" href="{{ url('static-sign-up') }}">Register</a>
       </div>
     </div>
   </nav>
