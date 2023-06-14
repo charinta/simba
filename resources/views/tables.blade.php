@@ -71,7 +71,7 @@
                                                                 class="avatar avatar-sm me-3" alt="user1">
                                                         </div>
                                                         <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">{{ $mhs->name }}</h6>
+                                                            <h6 class="mb-0 text-sm">{{ $mhs->nama }}</h6>
                                                             <p class="text-xs text-secondary mb-0">{{ $mhs->email }}</p>
                                                         </div>
                                                     </div>
@@ -87,12 +87,12 @@
                                                     <span
                                                         class="text-secondary text-xs font-weight-bold">{{ $mhs->tanggal_lahir }}</span>
                                                 </td>
-                                                <td class="align-middle">
+                                                {{-- <td class="align-middle">
                                                     <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
                                                         data-toggle="tooltip" data-original-title="Edit user">
                                                         Edit
                                                     </a>
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @empty
                                             <div class="alert alert-danger">

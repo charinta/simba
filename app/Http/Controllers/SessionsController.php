@@ -21,8 +21,17 @@ class SessionsController extends Controller
         'password' => 'required' 
     ]);
 
+<<<<<<< HEAD
     if (Auth::attempt($attributes)) {
         session()->regenerate();
+=======
+        if(Auth::attempt($attributes))
+        {
+            session()->regenerate();
+            return redirect('dashboard-admin')->with(['success'=>'You are logged in.']);
+        }
+        else{
+>>>>>>> 12644096137bdb4ce69ae7a793f2381c0ac5ac63
 
         $user = Auth::user();
 

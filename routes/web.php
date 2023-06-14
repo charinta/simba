@@ -38,6 +38,10 @@ Route::group(['middleware' => 'auth'], function () {
         return view('dashboard-admin');
     })->name('dashboard-mhs');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 12644096137bdb4ce69ae7a793f2381c0ac5ac63
 	Route::get('billing', function () {
 		return view('billing');
 	})->name('billing');
@@ -72,7 +76,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/user-profile', [InfoUserController::class, 'create']);
 	Route::post('/user-profile', [InfoUserController::class, 'store']);
     Route::get('/login', function () {
+<<<<<<< HEAD
 		return view('dashboard-view');
+=======
+		return view('dashboard-admin');
+>>>>>>> 12644096137bdb4ce69ae7a793f2381c0ac5ac63
 	})->name('sign-up');
 });
 
@@ -97,3 +105,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('session/register');
 })->name('register');
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
+Route::post('/mahasiswa/store', [MahasiswaController::class, 'store'])->name('mahasiswa.store');

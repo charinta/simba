@@ -55,5 +55,5 @@
 
 @endsection
 
-@push('dashboard')
+@push('dashboard-admin')
 @endpush
