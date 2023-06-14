@@ -5,7 +5,27 @@
         SIMBA
       </a>
       <div class="d-flex">
-        <a class="btn btn-outline-primary text-primary me-3" href="{{ url('dashboard') }}">Home</a>
+        @guest
+        <a class="btn btn-outline-primary text-primary me-3" href="{{ route('login') }}">Login</a>
+        @else
+        <div class="dropdown">
+          <a class="btn btn-outline-primary text-primary me-3 dropdown-toggle" href="#" role="button" id="navbarDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-user-circle"></i> {{ auth()->user()->name }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+                @csrf
+                <a class="btn btn-primary dropdown-item" href="{{ url('/logout') }} ">
+        <i class="fa fa-sign-out"></i> Logout
+    </a>
+  </li>
+          </ul>
+        </div>
+        @endguest
       </div>
     </div>
   </nav>
