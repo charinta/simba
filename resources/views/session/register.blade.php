@@ -4,20 +4,16 @@
 
 @section('content')
 
-  <main class="main-content  mt-0">
+<main class="main-content mt-0">
     <section>
-      <div class="page-header min-vh-75">
-        <div class="container my-5">
-          <div class="row">
-     
-              <div class="card card-plain mt-8">
-                <div class="card-header pb-0 text-left bg-transparent">
-
-            
-      
-                </div>
-                <div class="card card-body" style="margin: 0rem;" class="col-md-4">
-                <h1 align="center">Register</h1>
+        <div class="page-header min-vh-75">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card card-plain mt-8">
+                            <div class="card-header pb-0 text-left bg-transparent">
+                            <div class="card card-body">
+                                <h1 class="text-center">Register</h1>
                   <form role="form" method="POST" action="/session">
                   <div class="card-body">
               <form role="form text-left" method="POST" action="/register">

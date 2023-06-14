@@ -9,9 +9,10 @@
                     <div class="col-md-6">
                         <div class="card card-plain mt-8">
                             <div class="card-header pb-0 text-left bg-transparent">
+                            <div class="card card-body">
                                 <h1 class="text-center">Login</h1>
-                            </div>
-                            <div class="card-body">
+                           
+                            
                                 <form role="form" method="POST" action="/session">
                                     @csrf
                                     <div class="mb-3">
@@ -47,6 +48,7 @@
                 </div>
             </div>
         </div>
+</div>
     </section>
 </main>
 @endsection
