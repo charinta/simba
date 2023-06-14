@@ -18,4 +18,16 @@ class MahasiswaController extends Controller
         return view('create-mahasiswa');
         }
 
+    //fungsi untuk simpan data
+    public function store(Request $request){
+    $validatedData = $request->validate([
+        'name' => 'required',
+        'nim' => 'required',
+        // Tambahkan validasi untuk field lain sesuai kebutuhan
+    ]);
+
+    Mahasiswa::create($validatedData);
+
+    return redirect()->route('mahasiswa.index')->with('success', 'Data mahasiswa berhasil ditambahkan.');
+    }
 }
