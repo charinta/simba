@@ -71,7 +71,7 @@
                                                                 class="avatar avatar-sm me-3" alt="user1">
                                                         </div>
                                                         <div class="d-flex flex-column justify-content-center">
-                                                            <h6 class="mb-0 text-sm">{{ $mhs->name }}</h6>
+                                                            <h6 class="mb-0 text-sm">{{ $mhs->nama }}</h6>
                                                             <p class="text-xs text-secondary mb-0">{{ $mhs->email }}</p>
                                                         </div>
                                                     </div>
