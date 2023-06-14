@@ -2,16 +2,7 @@
 
 @section('auth')
 
-
-    @if(\Request::is('static-sign-up')) 
-        @include('layouts.navbars.guest.nav')
-        @yield('content')
-    
-    @elseif (\Request::is('static-sign-in')) 
-        @include('layouts.navbars.guest.nav')
-            @yield('content')
-    
-    @elseif (\Request::is('dashboard')) 
+    @if (\Request::is('dashboard')) 
         @include('layouts.navbars.auth.nav-guest')
             @yield('content')
     

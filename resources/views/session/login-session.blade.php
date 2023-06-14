@@ -1,4 +1,4 @@
-@extends('layouts.user_type.guest')
+@extends('layouts.user_type.auth')
 
 @section('content')
 <main class="main-content mt-0">
@@ -33,9 +33,6 @@
                                         <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Login</button>
                                     </div>
                                     <div class="text-center">
-                                        <small class="text-muted">Forgot your password? Reset your password
-                                            <a href="/login/forgot-password" class="text-info text-gradient font-weight-bold">here</a>
-                                        </small>
                                         <p class="mb-4 text-sm mx-auto">
                                             Don't have an account?
                                             <a href="register" class="text-info text-gradient font-weight-bold">Sign up</a>

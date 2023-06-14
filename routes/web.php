@@ -38,10 +38,6 @@ Route::group(['middleware' => 'auth'], function () {
         return view('dashboard-admin');
     })->name('dashboard-mhs');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 12644096137bdb4ce69ae7a793f2381c0ac5ac63
 	Route::get('billing', function () {
 		return view('billing');
 	})->name('billing');
@@ -76,11 +72,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/user-profile', [InfoUserController::class, 'create']);
 	Route::post('/user-profile', [InfoUserController::class, 'store']);
     Route::get('/login', function () {
-<<<<<<< HEAD
-		return view('dashboard-view');
-=======
 		return view('dashboard-admin');
->>>>>>> 12644096137bdb4ce69ae7a793f2381c0ac5ac63
 	})->name('sign-up');
 });
 
