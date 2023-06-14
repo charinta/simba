@@ -15,7 +15,7 @@ class MahasiswaController extends Controller
     
     //fungsi untuk create data pada tabel
     public function create(){
-        return view('create-mahasiswa');
+        return view('create');
         }
 
     //fungsi untuk simpan data
@@ -28,6 +28,6 @@ class MahasiswaController extends Controller
 
     Mahasiswa::create($validatedData);
 
-    return redirect()->route('mahasiswa.index')->with('success', 'Data mahasiswa berhasil ditambahkan.');
+    return redirect()->route('index')->with('success', 'Data mahasiswa berhasil ditambahkan.');
     }
 }
