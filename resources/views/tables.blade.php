@@ -87,12 +87,12 @@
                                                     <span
                                                         class="text-secondary text-xs font-weight-bold">{{ $mhs->tanggal_lahir }}</span>
                                                 </td>
-                                                <td class="align-middle">
+                                                {{-- <td class="align-middle">
                                                     <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
                                                         data-toggle="tooltip" data-original-title="Edit user">
                                                         Edit
                                                     </a>
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @empty
                                             <div class="alert alert-danger">
