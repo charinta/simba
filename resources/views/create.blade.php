@@ -43,7 +43,7 @@
                                             <td>Nama Lengkap</td>
                                             <td>
                                                 <input class="form-control" type="text" placeholder="Nama Lengkap"
-                                                    id="user-name" name="name">
+                                                    id="user-nama" name="nama">
                                             </td>
                                         </tr>
                                         <tr>
