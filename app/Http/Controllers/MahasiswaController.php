@@ -33,10 +33,7 @@ class MahasiswaController extends Controller
 
     public function showProfile()
     {
-        // Mengambil data mahasiswa dari tabel Mahasiswa
-        $mahasiswa = Mahasiswa::find(1); // Ubah angka 1 dengan ID mahasiswa yang ingin ditampilkan
-        
-        // Menampilkan halaman "Show Profile" dengan data mahasiswa
-        return view('show-profile', compact('mahasiswa'));
+        $mahasiswa = Mahasiswa::find(1); // Ganti 1 dengan ID mahasiswa yang ingin ditampilkan
+        return view('profile', compact('mahasiswa'));
     }
 }
