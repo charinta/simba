@@ -36,4 +36,39 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::find(1); // Ganti 1 dengan ID mahasiswa yang ingin ditampilkan
         return view('profile', compact('mahasiswa'));
     }
+
+    public function showProfile2()
+    {
+    $mahasiswa = Mahasiswa::find(1); // Ubah sesuai dengan id mahasiswa yang ingin ditampilkan
+    return view('details', compact('mahasiswa'));
+    }
+
+    public function edit($id)
+    {
+    $mahasiswa = Mahasiswa::findOrFail($id);
+    return view('edit', compact('mahasiswa'));
+    }
+
+    public function update($id, Request $request)
+    {
+    // Validasi input form
+    $validatedData = $request->validate([
+        'name' => 'required',
+        'nim' => 'required',
+        // tambahkan validasi untuk field lainnya
+    ]);
+
+    // Lakukan update data mahasiswa
+    $mahasiswa = Mahasiswa::findOrFail($id);
+    $mahasiswa->name = $request->input('name');
+    $mahasiswa->nim = $request->input('nim');
+    // lakukan update untuk field lainnya
+
+    // Simpan perubahan
+    $mahasiswa->save();
+
+    // Redirect ke halaman details dengan pesan sukses
+    return redirect()->route('mahasiswa.details', ['id' => $mahasiswa->id])
+                    ->with('success', 'Data mahasiswa berhasil diperbarui');
+    }
 }
