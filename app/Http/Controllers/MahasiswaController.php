@@ -31,9 +31,9 @@ class MahasiswaController extends Controller
     return redirect()->route('index')->with('success', 'Data mahasiswa berhasil ditambahkan.');
     }
 
-    public function showProfile()
+    public function showProfile($id)
     {
-        $mahasiswa = Mahasiswa::find(1); // Ganti 1 dengan ID mahasiswa yang ingin ditampilkan
+        $mahasiswa = Mahasiswa::find($id); // Ganti 1 dengan ID mahasiswa yang ingin ditampilkan
         return view('profile', compact('mahasiswa'));
     }
 
