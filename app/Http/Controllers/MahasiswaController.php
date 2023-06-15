@@ -19,17 +19,20 @@ class MahasiswaController extends Controller
         }
 
     //fungsi untuk simpan data
-    public function store(Request $request){
+    public function store(Request $request)
+{
     $validatedData = $request->validate([
         'nama' => 'required|min:10',
         'nim' => 'required',
-        // Tambahkan validasi untuk field lain sesuai kebutuhan
+        'email' => 'required', // Tambahkan validasi untuk kolom 'email'
+        'tanggal_lahir' => 'required',
+        'angkatan' => 'required',
     ]);
 
     Mahasiswa::create($validatedData);
 
-    return redirect()->route('index')->with('success', 'Data mahasiswa berhasil ditambahkan.');
-    }
+    return redirect()->route('mahasiswa.index')->with('success', 'Data mahasiswa berhasil ditambahkan.');
+}
 
     public function showProfile($id)
     {

@@ -74,7 +74,7 @@
                                                     id="user-birthdate" name="tanggal_lahir">
                                             </td>
                                         </tr>
-                                        <tr>
+                                        {{-- <tr>
                                             <td>Agama</td>
                                             <td>
                                                 <select class="form-select" id="user-religion" name="agama">
@@ -87,7 +87,7 @@
                                                     <option value="Konghucu">Konghucu</option>
                                                 </select>
                                             </td>
-                                        </tr>
+                                        </tr> --}}
                                         <tr>
                                             <td>Angkatan</td>
                                             <td>
