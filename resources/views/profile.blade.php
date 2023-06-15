@@ -43,18 +43,6 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Agama</td>
-                                        <td>
-                                            {{ $mahasiswa->agama }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Angkatan</td>
-                                        <td>
-                                            {{ $mahasiswa->angkatan }}
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <td>Status Keaktifan</td>
                                         <td>
                                             {{ $mahasiswa->status }}
