@@ -14,14 +14,16 @@
         @include('layouts.navbars.auth.nav-guest-login')
             @yield('content')
             
-    @else
-            <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg {{ (Request::is('rtl') ? 'overflow-hidden' : '') }}">
-                @include('layouts.navbars.auth.nav')
-                <div class="container-fluid py-4">
-                    @yield('content')
-                </div>
-            </main>
-        @endif
+    @elseif (\Request::is('dashboard-admin')) 
+        @include('layouts.navbars.auth.nav-admin')
+             @yield('content')
+
+    @elseif (\Request::is('dashboard-mhs')) 
+        @include('layouts.navbars.auth.nav-mhs')
+             @yield('content')
+                 
+                
+    @endif
 
         @include('components.fixed-plugin')
 
