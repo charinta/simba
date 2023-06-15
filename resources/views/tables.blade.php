@@ -88,7 +88,8 @@
                                                         class="badge badge-sm bg-gradient-success">{{ $mhs->status }}</span>
                                                 </td>
                                                 <td class="align-middle">
-                                                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                    <a href="{{ route('profile') }}"
+                                                        class="text-secondary font-weight-bold text-xs"
                                                         data-toggle="tooltip" data-original-title="Show user">
                                                         Show Details
                                                     </a>
