@@ -42,18 +42,18 @@
                                             {{ $mahasiswa->tanggal_lahir }}
                                         </td>
                                     </tr>
-                                    <tr>
+                                    {{-- <tr>
                                         <td>Status Keaktifan</td>
                                         <td>
                                             {{ $mahasiswa->status }}
                                         </td>
-                                    </tr>
-                                    {{-- <tr>
-                                        <td>Password</td>
-                                        <td>
-                                            {{ $mahasiswa->password }}
-                                        </td>
                                     </tr> --}}
+                                    <tr>
+                                        <td>Angkatan</td>
+                                        <td>
+                                            {{ $mahasiswa->angkatan }}
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>

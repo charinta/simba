@@ -22,11 +22,11 @@
                                             <th
                                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                 Tanggal Lahir</th>
-                                            <th
+                                            {{-- <th
                                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                 Status</th>
                                             <th class="text-secondary opacity-7"></th>
-                                        </tr>
+                                        </tr> --}}
                                     </thead>
                                     {{-- <tbody>
                                         <tr>
@@ -83,10 +83,10 @@
                                                     <span
                                                         class="text-secondary text-xs font-weight-bold">{{ $mhs->tanggal_lahir }}</span>
                                                 </td>
-                                                <td class="align-middle text-center text-sm">
+                                                {{-- <td class="align-middle text-center text-sm">
                                                     <span
                                                         class="badge badge-sm bg-gradient-success">{{ $mhs->status }}</span>
-                                                </td>
+                                                </td> --}}
                                                 <td class="align-middle">
                                                     <a href="{{ route('profile', $mhs->id) }}"
                                                         class="text-secondary font-weight-bold text-xs"
