@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('tanggal_lahir');
             $table->string('angkatan');
+            $table->string('agama');
             $table->timestamps();
         });
     }

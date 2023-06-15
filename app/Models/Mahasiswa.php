@@ -15,6 +15,7 @@ class Mahasiswa extends Model
         'nim',
         'status',
         'tanggal_lahir',
-        'angkatan'
+        'angkatan',
+        'agama'
     ];
 }
