@@ -23,21 +23,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group (['middleware' => 'auth'], function () {
-
-    Route::get('/', [HomeController::class, 'home']);
-	Route::get('dashboard', function () {
-		return view('dashboard');
-	})->name('dashboard');
-
-	Route::get('dashboard-mhs', function () {
-        return view('dashboard-mhs');
-    })->name('dashboard-mhs');
-
-	Route::get('dashboard-admin', function () {
-        return view('dashboard-admin');
-    })->name('dashboard-admin');
-
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('dashboard-admin',[App\Http\Controllers\HomeController::class, 'dashboard_admin'])->middleware('role:admin')->name('dashboard-admin');
+	Route::get('dashboard-mhs', [App\Http\Controllers\HomeController::class, 'dashboard_mhs'])->middleware('role:user')->name('dashboard-mhs');
+	
 	Route::get('billing', function () {
 		return view('billing');
 	})->name('billing');
@@ -79,9 +68,12 @@ Route::group (['middleware' => 'auth'], function () {
 
 
 Route::group(['middleware' => 'guest'], function () {
+	Route::get('/', function () {
+		return redirect()->route('login');
+	});
     Route::get('/register', [RegisterController::class, 'create']);
     Route::post('/register', [RegisterController::class, 'store']);
-    Route::get('/login', [SessionsController::class, 'create']);
+    Route::get('/login', [SessionsController::class, 'create'])->name('login');
     Route::post('/session', [SessionsController::class, 'store']);
 	Route::get('/login/forgot-password', [ResetController::class, 'create']);
 	Route::post('/forgot-password', [ResetController::class, 'sendEmail']);
@@ -90,9 +82,9 @@ Route::group(['middleware' => 'guest'], function () {
 
 });
 
-Route::get('/login', function () {
-    return view('session/login-session');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('session/login-session');
+// })->name('login');
 
 Route::get('/register', function () {
     return view('session/register');
