@@ -60,13 +60,13 @@
                                                     id="user-email" name="email">
                                             </td>
                                         </tr>
-                                        <tr>
+                                        {{-- <tr>
                                             <td>Foto</td>
                                             <td>
                                                 <input class="form-control" type="file" accept="image/*" id="user-photo"
                                                     name="photo" onchange="previewImage(event)">
                                             </td>
-                                        </tr>
+                                        </tr> --}}
                                         <tr>
                                             <td>Tanggal Lahir</td>
                                             <td>
@@ -100,19 +100,20 @@
                                                 </select>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        {{-- <tr>
                                             <td>Status Keaktifan</td>
                                             <td>
                                                 <input class="form-control" type="text" placeholder="Status Keaktifan"
                                                     id="user-activity" name="status_keaktifan" disabled>
                                             </td>
-                                        </tr>
+                                        </tr> --}}
                                     </table>
                                 </div>
                             </div>
                         </div>
                         <div class="text-end">
-                            <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ 'Simpan Data' }}</button>
+                            <button type="submit"
+                                class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ 'Simpan Data' }}</button>
                         </div>
                     </form>
                 </div>

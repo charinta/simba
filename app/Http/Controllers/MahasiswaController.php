@@ -21,7 +21,7 @@ class MahasiswaController extends Controller
     //fungsi untuk simpan data
     public function store(Request $request){
     $validatedData = $request->validate([
-        'name' => 'required',
+        'nama' => 'required|min:10',
         'nim' => 'required',
         // Tambahkan validasi untuk field lain sesuai kebutuhan
     ]);
@@ -37,9 +37,9 @@ class MahasiswaController extends Controller
         return view('profile', compact('mahasiswa'));
     }
 
-    public function showProfile2()
+    public function showProfile2($id)
     {
-    $mahasiswa = Mahasiswa::find(1); // Ubah sesuai dengan id mahasiswa yang ingin ditampilkan
+    $mahasiswa = Mahasiswa::find($id); // Ubah sesuai dengan id mahasiswa yang ingin ditampilkan
     return view('details', compact('mahasiswa'));
     }
 
@@ -53,14 +53,14 @@ class MahasiswaController extends Controller
     {
     // Validasi input form
     $validatedData = $request->validate([
-        'name' => 'required',
+        'nama' => 'required',
         'nim' => 'required',
         // tambahkan validasi untuk field lainnya
     ]);
 
     // Lakukan update data mahasiswa
     $mahasiswa = Mahasiswa::findOrFail($id);
-    $mahasiswa->name = $request->input('name');
+    $mahasiswa->name = $request->input('nama');
     $mahasiswa->nim = $request->input('nim');
     // lakukan update untuk field lainnya
 

@@ -1,4 +1,4 @@
-@extends('layouts.user_type.guest')
+@extends('layouts.user_type.auth')
 
 @section('content')
     <main class="main-content mt-0">
