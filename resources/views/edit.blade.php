@@ -5,12 +5,12 @@
         <div class="page-header min-height-100 border-radius-xl mt-4" style="background-position-y: 50%;"></div>
         <div class="card card-body blur shadow-blur mx-auto mt-n6 col-12">
             <h3 class="mb-1 text-center">
-                {{ __('Ubah Data') }}
+                {{ __('Biodata Diri') }}
             </h3>
             <div class="container-fluid py-4">
                 <div class="card-body pt-4 p-3">
-                    <form action="{{ route('mahasiswa.update', ['id' => $mahasiswa->id]) }}" method="POST" role="form text-left">
-                    @csrf
+                    <form action="{{ route('mahasiswa.update', ['id' => $mahasiswa->id]) }}" method="POST" role="form text-left" enctype="multipart/form-data">
+                        @csrf
                         @method('PUT')
                         @if($errors->any())
                             <div class="mt-3 alert alert-primary alert-dismissible fade show" role="alert">

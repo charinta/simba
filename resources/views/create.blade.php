@@ -112,8 +112,7 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <button type="submit"
-                                class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ 'Simpan Data' }}</button>
+                            <button type="submit" class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ 'Simpan Data' }}</button>
                         </div>
                     </form>
                 </div>
