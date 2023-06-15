@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group (['middleware' => 'auth'], function () {
 
     Route::get('/', [HomeController::class, 'home']);
 	Route::get('dashboard', function () {
@@ -105,4 +105,3 @@ Route::get('/profile', [MahasiswaController::class, 'showProfile'])->name('profi
 Route::get('/details', [MahasiswaController::class, 'showProfile2']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
-
