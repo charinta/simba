@@ -8,7 +8,6 @@
                 href="{{ url('dashboard') }}">
                 SIMBA
             </a>
-            <p>Halo</p>
             <div class="d-flex">
                 <a class="btn btn-outline-primary text-primary me-3" href="{{ url('/login') }}">Login</a>
                 <a class="btn btn-primary" href="{{ url('register') }}">Register</a>
