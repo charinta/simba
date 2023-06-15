@@ -19,7 +19,7 @@
                 <h5 class="sub-title">Biodata Diri</h5>
             </div>
             <div class="pricing-btn rounded-buttons text-center">
-                <a class="main-btn rounded-one" href="profile">GET STARTED</a>
+                <a class="main-btn rounded-one" href="#">GET STARTED</a>
             </div>
         </div>
     </div>
