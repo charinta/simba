@@ -35,7 +35,7 @@
                                     <div class="text-center">
                                         <p class="mb-4 text-sm mx-auto">
                                             Don't have an account?
-                                            <a href="register" class="text-info text-gradient font-weight-bold">Sign up</a>
+                                            <a href="/register" class="text-info text-gradient font-weight-bold">Sign up</a>
                                         </p>
                                     </div>
                                 </form>

@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('dashboard-admin', function () {
         return view('dashboard-admin');
-    })->name('dashboard-mhs');
+    })->name('dashboard-admin');
 
 	Route::get('billing', function () {
 		return view('billing');
@@ -105,4 +105,3 @@ Route::get('/profile', [MahasiswaController::class, 'showProfile'])->name('profi
 Route::get('/details', [MahasiswaController::class, 'showProfile2']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
-
