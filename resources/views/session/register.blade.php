@@ -14,9 +14,9 @@
                             <div class="card-header pb-0 text-left bg-transparent">
                             <div class="card card-body">
                                 <h1 class="text-center">Register</h1>
-                  <form role="form" method="POST" action="/session">
+                  <!-- <form role="form" method="POST" action="/session"> kayaknya ini masalahnya bim -->
                   <div class="card-body">
-              <form role="form text-left" method="POST" action="/register">
+              <form role="form text-left" method="POST" action="/registerUser">
                 @csrf
                 <label class="fs-6">Name</label>
                 <div class="mb-3">
