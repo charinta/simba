@@ -45,67 +45,46 @@
                                             <td>Nama Lengkap</td>
                                             <td>
                                                 <input class="form-control" type="text" placeholder="Nama Lengkap"
-                                                    id="user-name" name="name" value="{{ $mahasiswa->name }}">
+                                                    id="user-name" name="name"
+                                                    value="{{ old('nama', $mahasiswa->nama) }}">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>NIM</td>
                                             <td>
                                                 <input class="form-control" type="text" placeholder="NIM" id="user-nim"
-                                                    name="nim" value="{{ $mahasiswa->nim }}">
+                                                    name="nim" value="{{ old('nim', $mahasiswa->nim) }}">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Email</td>
                                             <td>
                                                 <input class="form-control" type="email" placeholder="Email"
-                                                    id="user-email" name="email" value="{{ $mahasiswa->email }}">
+                                                    id="user-email" name="email"
+                                                    value="{{ old('email', $mahasiswa->email) }}">
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Foto</td>
+                                            {{-- <td>Foto</td>
                                             <td>
                                                 <input class="form-control" type="file" accept="image/*" id="user-photo"
                                                     name="photo" onchange="previewImage(event)">
-                                            </td>
+                                            </td> --}}
                                         </tr>
                                         <tr>
                                             <td>Tanggal Lahir</td>
                                             <td>
                                                 <input class="form-control" type="date" placeholder=""
                                                     id="user-birthdate" name="tanggal_lahir"
-                                                    value="{{ $mahasiswa->tanggal_lahir }}">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Agama</td>
-                                            <td>
-                                                <select class="form-select" id="user-religion" name="agama">
-                                                    <option value="">Pilih Agama</option>
-                                                    <option value="Islam"
-                                                        {{ $mahasiswa->agama == 'Islam' ? 'selected' : '' }}>Islam</option>
-                                                    <option value="Kristen"
-                                                        {{ $mahasiswa->agama == 'Kristen' ? 'selected' : '' }}>Kristen
-                                                    </option>
-                                                    <option value="Katolik"
-                                                        {{ $mahasiswa->agama == 'Katolik' ? 'selected' : '' }}>Katolik
-                                                    </option>
-                                                    <option value="Hindu"
-                                                        {{ $mahasiswa->agama == 'Hindu' ? 'selected' : '' }}>Hindu</option>
-                                                    <option value="Buddha"
-                                                        {{ $mahasiswa->agama == 'Buddha' ? 'selected' : '' }}>Buddha
-                                                    </option>
-                                                    <option value="Konghucu"
-                                                        {{ $mahasiswa->agama == 'Konghucu' ? 'selected' : '' }}>Konghucu
-                                                    </option>
-                                                </select>
+                                                    value="{{ old('tanggal_lahir', $mahasiswa->tanggal_lahir) }}">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Angkatan</td>
                                             <td>
                                                 <select class="form-select" id="user-generation" name="angkatan">
-                                                    <option value="">Pilih Angkatan</option>
+                                                    <option value="{{ old('angkatan', $mahasiswa->angkatan) }}">Pilih
+                                                        Angkatan</option>
                                                     <option value="2023"
                                                         {{ $mahasiswa->angkatan == '2023' ? 'selected' : '' }}>2023
                                                     </option>
@@ -122,31 +101,11 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Status Keaktifan</td>
-                                            <td>
-                                                <select class="form-select" id="user-activity" name="status_keaktifan">
-                                                    <option value="">Pilih Status Keaktifan</option>
-                                                    <option value="Aktif"
-                                                        {{ $mahasiswa->status_keaktifan == 'Aktif' ? 'selected' : '' }}>
-                                                        Aktif</option>
-                                                    <option value="Cuti"
-                                                        {{ $mahasiswa->status_keaktifan == 'Cuti' ? 'selected' : '' }}>Cuti
-                                                    </option>
-                                                    <option value="DO Administrasi"
-                                                        {{ $mahasiswa->status_keaktifan == 'DO Administrasi' ? 'selected' : '' }}>
-                                                        DO Administrasi</option>
-                                                    <option value="Tanpa Keterangan"
-                                                        {{ $mahasiswa->status_keaktifan == 'Tanpa Keterangan' ? 'selected' : '' }}>
-                                                        Tanpa Keterangan</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Password</td>
-                                            <td>
-                                                <input class="form-control" type="password" placeholder="Password"
-                                                    id="user-password" name="password">
-                                            </td>
+                                            {{-- <td>Status Keaktifan</td> --}}
+                                            {{-- 
+                                                
+                                                
+                                                --}}
                                         </tr>
                                     </table>
                                 </div>

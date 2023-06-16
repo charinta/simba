@@ -61,8 +61,12 @@ class MahasiswaController extends Controller
     {
     // Validasi input form
     $validatedData = $request->validate([
-        'nama' => 'required',
+        'nama' => 'required|min:10',
         'nim' => 'required',
+        'email' => 'required', // Tambahkan validasi untuk kolom 'email'
+        'tanggal_lahir' => 'required',
+        'angkatan' => 'required',
+        // 'status' => 'required',
         // tambahkan validasi untuk field lainnya
     ]);
 
@@ -70,6 +74,10 @@ class MahasiswaController extends Controller
     $mahasiswa = Mahasiswa::findOrFail($id);
     $mahasiswa->name = $request->input('nama');
     $mahasiswa->nim = $request->input('nim');
+    $mahasiswa->email = $request->input('email');
+    $mahasiswa->tanggal_lahir=$request->input('tanggal_lahir');
+    $mahasiswa->angkatan=$request->input('angkatan');
+    // $mahasiswa->status=$request->input('status');
     // lakukan update untuk field lainnya
 
     // Simpan perubahan
@@ -83,6 +91,6 @@ class MahasiswaController extends Controller
     public function delete($id){
         $mahasiswa = Mahasiswa::find($id);
         $mahasiswa->delete();
-        return view('tables-admin',);
+        return redirect()->route('mahasiswa.indexadmin')->with('success', 'Data Berhasil Dihapus');
     }
 }
