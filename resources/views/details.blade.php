@@ -9,67 +9,62 @@
             </h3>
             <div class="container-fluid py-4">
                 <div class="card-body pt-4 p-3">
-                    <form method="POST">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group table-responsive">
-                                    <table align="center" cellpadding="9" style="border-collapse: collapse; width: 100%;">
-                                        <tr>
-                                            <td rowspan="9">
-                                                <img src="../assets/img/bruce-mars.jpg" alt="..."
-                                                    class="w-100 border-radius-lg shadow-sm" style="max-width: 300px;"
-                                                    align="center">
-                                            </td>
-                                            <td>Nama Lengkap</td>
-                                            <td>
-                                                {{ $mahasiswa->nama }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>NIM</td>
-                                            <td>
-                                                {{ $mahasiswa->nim }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Email</td>
-                                            <td>
-                                                {{ $mahasiswa->email }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tanggal Lahir</td>
-                                            <td>
-                                                {{ $mahasiswa->tanggal_lahir }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>Angkatan</td>
-                                            <td>
-                                                {{ $mahasiswa->angkatan }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Status Keaktifan</td>
-                                            <td>
-                                                {{ $mahasiswa->status_keaktifan }}
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group table-responsive">
+                                <table align="center" cellpadding="9" style="border-collapse: collapse; width: 100%;">
+                                    <tr>
+                                        <td rowspan="9">
+                                            <img src="../assets/img/bruce-mars.jpg" alt="..."
+                                                class="w-100 border-radius-lg shadow-sm" style="max-width: 300px;"
+                                                align="center">
+                                        </td>
+                                        <td>Nama Lengkap</td>
+                                        <td>
+                                            {{ $mahasiswa->nama }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>NIM</td>
+                                        <td>
+                                            {{ $mahasiswa->nim }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>
+                                            {{ $mahasiswa->email }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tanggal Lahir</td>
+                                        <td>
+                                            {{ $mahasiswa->tanggal_lahir }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>Angkatan</td>
+                                        <td>
+                                            {{ $mahasiswa->angkatan }}
+                                        </td>
+                                    </tr>
+
+                                </table>
                             </div>
                         </div>
-                        <div class="text-end">
-                            <a href="{{ route('mahasiswa.edit', ['id' => $mahasiswa->id]) }}"
-                                class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ __('Ubah Data') }}</a>
-                            @METHOD('DELETE')
-                            <a href="{{ route('mahasiswa.delete', ['id' => $mahasiswa->id]) }}"
-                                class="btn bg-gradient-danger btn-md mt-4 mb-4">{{ __('Hapus Data') }}</a>
-                            {{-- <button type="button"
-                            class="btn bg-gradient-danger btn-md mt-4 mb-4">{{ __('Hapus Data') }}</button> --}}
-                        </div>
-                    </form>
+                    </div>
+                    <div class="text-end">
+                        <a href="{{ route('mahasiswa.edit', $mahasiswa->id) }}"
+                            class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ __('Ubah Data') }}</a>
+                        <form action="{{ route('mahasiswa.delete', $mahasiswa->id) }}" method="POST"
+                            style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                class="btn bg-gradient-danger btn-md mt-4 mb-4">{{ __('Hapus Data') }}</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
