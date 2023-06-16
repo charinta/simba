@@ -79,4 +79,10 @@ class MahasiswaController extends Controller
     return redirect()->route('mahasiswa.details', ['id' => $mahasiswa->id])
                     ->with('success', 'Data mahasiswa berhasil diperbarui');
     }
+
+    public function delete($id){
+        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa->delete();
+        return view('tables-admin',);
+    }
 }

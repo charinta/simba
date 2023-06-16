@@ -1,22 +1,23 @@
 @extends('layouts.user_type.auth')
 
 @section('content')
-
-<div class="container-fluid">
-    <div class="page-header min-height-100 border-radius-xl mt-4" style="background-position-y: 50%;"></div>
-    <div class="card card-body blur shadow-blur mx-auto mt-n6 col-12">
-        <h3 class="mb-1 text-center">
-            {{ __('Biodata Diri') }}
-        </h3>
-        <div class="container-fluid py-4">
-            <div class="card-body pt-4 p-3">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group table-responsive">
-                                    <table align="center" cellpadding="9" style="border-collapse: collapse; width: 100%;">
+    <div class="container-fluid">
+        <div class="page-header min-height-100 border-radius-xl mt-4" style="background-position-y: 50%;"></div>
+        <div class="card card-body blur shadow-blur mx-auto mt-n6 col-12">
+            <h3 class="mb-1 text-center">
+                {{ __('Biodata Diri') }}
+            </h3>
+            <div class="container-fluid py-4">
+                <div class="card-body pt-4 p-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group table-responsive">
+                                <table align="center" cellpadding="9" style="border-collapse: collapse; width: 100%;">
                                     <tr>
                                         <td rowspan="9">
-                                            <img src="../assets/img/bruce-mars.jpg" alt="..." class="w-100 border-radius-lg shadow-sm" style="max-width: 300px;" align="center">
+                                            <img src="../assets/img/bruce-mars.jpg" alt="..."
+                                                class="w-100 border-radius-lg shadow-sm" style="max-width: 300px;"
+                                                align="center">
                                         </td>
                                         <td>Nama Lengkap</td>
                                         <td>
@@ -66,16 +67,20 @@
                                         </td>
                                     </tr>
                                 </table>
-                                </div>
                             </div>
                         </div>
-                        <div class="text-end">
-                            <a href="{{ route('mahasiswa.edit', ['id' => $mahasiswa->id]) }}" class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ __('Ubah Data') }}</a>
-                            <button type="button" class="btn bg-gradient-danger btn-md mt-4 mb-4">{{ __('Hapus Data') }}</button>
-                        </div>
+                    </div>
+                    <div class="text-end">
+                        <a href="{{ route('mahasiswa.edit', ['id' => $mahasiswa->id]) }}"
+                            class="btn bg-gradient-dark btn-md mt-4 mb-4">{{ __('Ubah Data') }}</a>
+                        <a href="{{ route('mahasiswa.delete', ['id' => $mahasiswa->id]) }}"
+                            class="btn bg-gradient-danger btn-md mt-4 mb-4">{{ __('Hapus Data') }}</a>
+                        {{-- <button type="button"
+                            class="btn bg-gradient-danger btn-md mt-4 mb-4">{{ __('Hapus Data') }}</button> --}}
+                    </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    @endsection
+@endsection
