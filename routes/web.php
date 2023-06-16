@@ -31,9 +31,9 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('billing');
 	})->name('billing');
 
-	Route::get('profile', function () {
-		return view('profile');
-	})->name('profile');
+	// Route::get('profile', function () {
+	// 	return view('profile');
+	// })->name('profile');
 
 	Route::get('rtl', function () {
 		return view('rtl');
@@ -44,12 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('user-management');
 
 	Route::get('tables', [MahasiswaController::class, 'index']);
-
-    Route::get('virtual-reality', function () {
-		return view('virtual-reality');
-	})->name('virtual-reality');
-
-	Route::get('tables-admin', [MahasiswaController::class, 'indexAdmin']);
 
     Route::get('virtual-reality', function () {
 		return view('virtual-reality');
@@ -78,7 +72,7 @@ Route::group(['middleware' => 'guest'], function () {
 		return redirect()->route('login');
 	});
     Route::get('/register', [RegisterController::class, 'create']);
-    Route::post('/register', [RegisterController::class, 'store']);
+    Route::post('/registerUser', [RegisterController::class, 'store'])->name('registerUser');
     Route::get('/login', [SessionsController::class, 'create'])->name('login');
     Route::post('/session', [SessionsController::class, 'store']);
 	Route::get('/login/forgot-password', [ResetController::class, 'create']);
@@ -92,16 +86,14 @@ Route::group(['middleware' => 'guest'], function () {
 //     return view('session/login-session');
 // })->name('login');
 
-Route::get('/register', function () {
-    return view('session/register');
-})->name('register');
+// Route::get('/register', function () {
+//     return view('session/register');
+// })->name('register');
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
-Route::get('/mahasiswa', [MahasiswaController::class, 'indexAdmin'])->name('mahasiswa.indexadmin');
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
 Route::post('/mahasiswa/store', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
-Route::get('/profile/{id}', [MahasiswaController::class, 'showProfile'])->name('profile');
-Route::get('/details/{id}', [MahasiswaController::class, 'showProfile2'])->name('details');
+Route::get('/profile/{id}', [MahasiswaController::class, 'showProfile'])->name('profile'); 
+Route::get('/details', [MahasiswaController::class, 'showProfile2']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
-Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
