@@ -46,7 +46,7 @@
                     <h5 class="sub-title">Data Mahasiswa Tahun 2023</h5>
                 </div>
                 <div class="pricing-btn rounded-buttons text-center">
-                    <a class="main-btn rounded-one" href="#">GET STARTED</a>
+                    <a class="main-btn rounded-one" href="tables-admin">GET STARTED</a>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <a href="dashboard-mhs" class="btn btn-md btn-danger">KEMBALI</a>
+                            <a href="dashboard-admin" class="btn btn-md btn-danger">KEMBALI</a>
                             <h6>Data Mahasiswa</h6>
                         </div>
                         <div class="card-body px-0 pt-0 pb-2">
