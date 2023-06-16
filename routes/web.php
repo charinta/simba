@@ -91,6 +91,7 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
+Route::get('/mahasiswa', [MahasiswaController::class, 'indexAdmin'])->name('mahasiswa.indexadmin');
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
 Route::post('/mahasiswa/store', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
 Route::get('/profile/{id}', [MahasiswaController::class, 'showProfile'])->name('profile');

@@ -1,6 +1,7 @@
 @extends('layouts.user_type.auth')
 
 @section('content')
+    {{-- <a href="tables" class="btn btn-md btn-danger">KEMBALI</a> --}}
     <div class="container-fluid">
         <div class="page-header min-height-100 border-radius-xl mt-4" style="background-position-y: 50%;"></div>
         <div class="card card-body blur shadow-blur mx-auto mt-n6 col-12">

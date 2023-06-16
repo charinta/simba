@@ -12,6 +12,11 @@ class MahasiswaController extends Controller
             $mahasiswa   = Mahasiswa::all();
             return view('tables')->with('mahasiswa', $mahasiswa);
         }
+
+         public function indexAdmin(){
+            $mahasiswa   = Mahasiswa::all();
+            return view('tables-admin')->with('mahasiswa', $mahasiswa);
+        }
     
     //fungsi untuk create data pada tabel
     public function create(){

@@ -1,33 +1,37 @@
 @extends('layouts.app')
 
 @section('auth')
-
-    @if (\Request::is('dashboard')) 
+    @if (\Request::is('dashboard'))
         @include('layouts.navbars.auth.nav-guest')
-            @yield('content')
-    
-    @elseif (\Request::is('login')) 
+        @yield('content')
+    @elseif (\Request::is('login'))
         @include('layouts.navbars.auth.nav-guest-login')
-            @yield('content')
-    
-    @elseif (\Request::is('register')) 
+        @yield('content')
+    @elseif (\Request::is('register'))
         @include('layouts.navbars.auth.nav-guest-login')
-            @yield('content')
-            
-    @elseif (\Request::is('dashboard-admin')) 
+        @yield('content')
+    @elseif (\Request::is('dashboard-admin'))
         @include('layouts.navbars.auth.nav-admin')
-             @yield('content')
-
-    @elseif (\Request::is('dashboard-mhs')) 
+        @yield('content')
+    @elseif (\Request::is('dashboard-mhs'))
         @include('layouts.navbars.auth.nav-mhs')
-             @yield('content')
-                 
-                
+        @yield('content')
+    @elseif(\Request::is('tables'))
+        @include('layouts.navbars.auth.nav-mhs')
+        @yield('content')
+    @elseif(\Request::is('tables-admin'))
+        @include('layouts.navbars.auth.nav-admin')
+        @yield('content')
+    @elseif(\Request::is('mahasiswa'))
+        @include('layouts.navbars.auth.nav-mhs')
+        @yield('content')
+        {{-- @elseif(\Request::is('profile/{id}'))
+        @include('layouts.navbars.auth.nav-mhs')
+        @yield('content') --}}
+    @elseif(\Request::is('mahasiswa/create'))
+        @include('layouts.navbars.auth.nav-mhs')
+        @yield('content')
     @endif
 
-        @include('components.fixed-plugin')
-
-
-    
-
+    @include('components.fixed-plugin')
 @endsection
