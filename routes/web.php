@@ -49,6 +49,12 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('virtual-reality');
 	})->name('virtual-reality');
 
+	Route::get('tables-admin', [MahasiswaController::class, 'indexAdmin']);
+
+    Route::get('virtual-reality', function () {
+		return view('virtual-reality');
+	})->name('virtual-reality');
+
     Route::get('static-sign-in', function () {
 		return view('static-sign-in');
 	})->name('sign-in');
@@ -91,10 +97,11 @@ Route::group(['middleware' => 'guest'], function () {
 // })->name('register');
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
+Route::get('/mahasiswa', [MahasiswaController::class, 'indexAdmin'])->name('mahasiswa.indexadmin');
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
 Route::post('/mahasiswa/store', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
 Route::get('/profile/{id}', [MahasiswaController::class, 'showProfile'])->name('profile'); 
-Route::get('/details', [MahasiswaController::class, 'showProfile2']);
+Route::get('/details/{id}', [MahasiswaController::class, 'showProfile2'])->name('details');
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::put('/mahasiswa/edit/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
 Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
