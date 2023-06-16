@@ -104,3 +104,4 @@ Route::get('/profile/{id}', [MahasiswaController::class, 'showProfile'])->name('
 Route::get('/details/{id}', [MahasiswaController::class, 'showProfile2'])->name('details');
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
 Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
+Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'delete'])->name('mahasiswa.delete');
